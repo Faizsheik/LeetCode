@@ -19,7 +19,7 @@ class Solution {
 //         }
         
         int min = Integer.MAX_VALUE;
-        int max_diff = -1;
+        int max_diff = -1;      
         
         for(int i=0;i<nums.length;i++)
         {
@@ -33,9 +33,7 @@ class Solution {
             }
         }
 
-        
     
-        
         return max_diff;
     }
 }
