@@ -10,7 +10,7 @@ class Solution
              if(first == last)
              {
                  return first;
-                 
+    
              }
          }
         return -1;
