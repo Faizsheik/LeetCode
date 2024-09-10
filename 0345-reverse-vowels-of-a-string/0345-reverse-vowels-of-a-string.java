@@ -7,16 +7,20 @@ class Solution {
 
         int end = s.length()-1;
 
-        while (start<end){
-            while (start < end && !isVowel(chars[start])) {
+        while (start<end)
+        {
+            while (start < end && !isVowel(chars[start]))
+            {
                 start++;
             }
 
-            while (start < end && !isVowel(chars[end])) {
+            while(start < end && !isVowel(chars[end]))
+            {
                 end--;
             }
 
-            if (start < end) {
+            if (start < end )
+            {
                 swap(chars, start, end);
                 start++;
                 end--;
