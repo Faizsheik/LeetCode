@@ -64,18 +64,21 @@
 }*/
 
 
-class Solution {
+/*class Solution {
     public int minOperations(String s) {
-        int count1 = 0, count2 = 0; // Count for two different patterns
-        int i = 0, j = 1;           // Two pointers for checking consecutive positions
+        int count1 = 0, count2 = 0; 
+        int i = 0, j = 1;           
 
         // First pass: Consider the pattern starting with '0'
-        while (i < s.length()) {
+        while (i < s.length()) 
+        {
             if (i % 2 == 0) { // For even indices, we expect '0'
                 if (s.charAt(i) != '0') {
                     count1++; // Increment if it's not '0'
                 }
-            } else { // For odd indices, we expect '1'
+            }
+            else
+            { // For odd indices, we expect '1'
                 if (s.charAt(i) != '1') {
                     count1++; // Increment if it's not '1'
                 }
@@ -87,12 +90,16 @@ class Solution {
         i = 0;
         
         // Second pass: Consider the pattern starting with '1'
-        while (i < s.length()) {
-            if (i % 2 == 0) { // For even indices, we expect '1'
+        while (i < s.length()) 
+        {
+            if (i % 2 == 0)
+            { // For even indices, we expect '1'
                 if (s.charAt(i) != '1') {
                     count2++; // Increment if it's not '1'
                 }
-            } else { // For odd indices, we expect '0'
+            } 
+            else 
+            { // For odd indices, we expect '0'
                 if (s.charAt(i) != '0') {
                     count2++; // Increment if it's not '0'
                 }
@@ -103,7 +110,64 @@ class Solution {
         // Return the minimum of both counts
         return Math.min(count1, count2);
     }
+}*/
+
+
+class Solution
+{
+    public int minOperations(String s)
+    {
+        
+        int count1 = 0,count2 =0;
+        int i=0;
+        
+        while(i<s.length())
+        {
+            if(i%2==0)
+            {
+                if(s.charAt(i)!='0')
+                {
+                    count1=count1+1;
+                }
+            }
+            else
+            {
+                if(s.charAt(i)!='1')
+                {
+                    count1=count1+1;
+                }
+                
+            }
+            i++;
+            
+        }
+        
+        i=0;
+        while(i<s.length())
+        {
+            if(i%2==0)
+            {
+                if(s.charAt(i)!='1')
+                {
+                    count2 = count2+1;
+                }
+                
+            }
+            else
+            {
+                 if(s.charAt(i)!='0')
+                {
+                    count2 = count2+1;
+                }
+            }
+            i++;
+        }
+        return Math.min(count1,count2);
+        
+    }
 }
+
+
 
 
 
